@@ -33,7 +33,6 @@ body {
 
 
 
-
 .main-content {
    background: #141922;
    height: 100%;
@@ -54,6 +53,7 @@ body {
    justify-content: flex-end;
    align-items: center;
    padding: 10px;
+   z-index: 3;
 }
 
 .btn-round {
@@ -136,13 +136,153 @@ body {
    border-radius: 100%;
 }
 
+.img-container {
+   position: relative;
+}
+
+
+
+.img-layover {
+   display: none;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.img-container:hover .img-layover {
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img-container a {
+   text-decoration: none;
+   color: inherit;
+   font-size: 60px;
+}
+
 
 
 footer {
    width: 100%;
    height: 90px;
    background-color: #282828;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
 }
+
+.display-song {
+   display: flex;
+   align-items: center;
+}
+.display-song img {
+   height: 50px;
+   margin: 10px;
+}
+
+.display-song__text h6 {
+   margin-bottom: 0;
+}
+.display-song__text p {
+   font-size: 10px;
+   color: #b0b0af;
+}
+
+.display-song__icons {
+   display: flex;
+   flex-direction: column;
+   margin-left: 10px;
+}
+.display-song__icons i {
+   padding: 5px;
+   color: #b0b0af;
+}
+.display-song__icons i:hover {
+   color: white;
+}
+
+.display-player {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: 70%;
+}
+
+.player-container {
+   width: 100%;
+   text-align: center;
+}
+
+#current-time,
+#end-time {
+   font-size: 10px;
+}
+
+.display-player__slider {
+   width: 60%;
+   height: 3px;
+   display: inline-block;
+   margin: 0 20px;
+}
+
+.display-player__icons {
+   width: 100%;
+   text-align: center;
+}
+.display-player__icons i {
+   padding: 0 5px;
+}
+
+.display-volume {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+}
+
+.display-volume i {
+   color: white;
+   padding: 5px;
+}
+
+
+.display-volume__slider {
+   width: 100px;
+   height: 3px;
+}
+
+.slider {
+   background-color: #b0b0af;
+   border-radius: 5px;
+   position: relative;
+   cursor: pointer;
+}
+
+
+
+.display-slider-over {
+   width: 10%;
+   height: 100%;
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-color: white;
+   border-radius: 5px;
+}
+
+
+
+
+
+.display-slider:hover .display-slider-over {
+   background-color: #81BA3D;
+}
+
 
 /* small */
 @media screen and (min-width: 576px) {
@@ -159,7 +299,10 @@ footer {
 /* medium */
 @media screen and (min-width: 768px) {
 
-
+   .display-song__icons {
+      flex-direction: row;
+      margin-left: 30px;
+   }
 }
 
 /* large */
