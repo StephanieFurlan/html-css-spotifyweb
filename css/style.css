@@ -3,32 +3,172 @@
    padding: 0;
    margin: 0;
 }
+
 body {
    font-family: 'Montserrat', sans-serif;
+   color: white;
+   font-size: 14px;
 }
+
 
 .flex-container {
    background-color: yellow;
    width: 100%;
-   height: calc(100vh - 100px);
+   height: calc(100vh - 90px);
    display: flex;
 }
 
 .side-nav-bar {
-   background: blue;
-   width: 200px;
+   background: #121212;
+   width: 50px;
    height: 100%;
+   padding: 24px;
 }
 
-.main-content {
-   background: pink;
-   width: 100%;
-   height: 100%;
-   overflow: auto;
+
+.logo-container img {
+   width: 131px;
 }
+
+
+
+
+
+.main-content {
+   background: #141922;
+   height: 100%;
+   width: calc(100% - 50px);
+   overflow: auto;
+   position: relative;
+}
+
+.top-layover {
+   position: sticky;
+   top: 0;
+   right: 0;
+   height: 100px;
+   width: 100%;
+   background-color: #080B12;
+   opacity: 0.9;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 10px;
+}
+
+.btn-round {
+   text-decoration: none;
+   color: inherit;
+   border: 1px solid white;
+   padding: 15px 50px;
+   text-transform: uppercase;
+   border-radius: 50px;
+}
+
+.btn-round:hover {
+   padding: 20px 60px;
+   text-decoration: none;
+   color: inherit;
+}
+
+
+
+
+.nav-bar {
+   padding: 0 10px;
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.nav-bar li {
+   padding: 20px 10px;
+}
+.nav-bar li a {
+   text-decoration: none;
+   color: #b0b0af;
+   text-transform: uppercase;
+}
+
+.nav-bar li:first-child a {
+   border-bottom: 2px solid #81BA3D;
+}
+
+
+.nav-bar li a:hover {
+   color: white;
+}
+
+
+
+
+
+.section-container {
+   padding: 0 20px;
+}
+
+.section-title,
+.section-subtitle {
+   margin-bottom: 20px;
+}
+
+.section-subtitle,
+.img-subtitle {
+   color: #b0b0af;
+}
+
+.card-container {
+   margin-bottom: 15px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.img-container img {
+   width: 100%;
+   margin-bottom: 15px;
+}
+
+.img-container--circle img {
+   border-radius: 100%;
+}
+
+
 
 footer {
    width: 100%;
-   height: 100px;
-   background-color: red;
+   height: 90px;
+   background-color: #282828;
 }
+
+/* small */
+@media screen and (min-width: 576px) {
+
+   .main-content {
+      width: calc(100% - 232px);
+   }
+
+   .side-nav-bar {
+      width: 232px;
+   }
+}
+
+/* medium */
+@media screen and (min-width: 768px) {
+
+
+}
+
+/* large */
+@media screen and (min-width: 992px) {
+
+   .card-container {
+      max-width: 300px;
+   }
+}
+
+/* extra-large */
+@media screen and (min-width: 1200px) {  }
