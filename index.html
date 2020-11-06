@@ -10,22 +10,22 @@
       <!-- Google fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-
-
       <link rel="stylesheet" href="css/style.css">
       <title>Spotify Web</title>
    </head>
    <body>
-
+      <!-- Main flex container -->
       <div class="flex-container">
+         <!-- Side navigation bar -->
          <div class="side-nav-bar">
+            <!-- Top side nvavigation bar -->
             <div class="side-nav-bar__top">
+               <!-- Spotify logo -->
                <div class="logo-container">
                   <i id="img-xs" class="fab fa-spotify"></i>
                   <img id="img-s"src="img/spotify-logo.png" alt="">
                </div>
-
-
+               <!-- Search menu -->
                <div class="search-section">
                   <ul class="search-list">
                      <li id="active">
@@ -50,7 +50,7 @@
                   </a>
                </div>
             </div>
-
+            <!-- Scrollable playlists -->
             <ul class="playlist-list">
                <li><a href="">Nome Playlist</a></li>
                <li><a href="">Nome Playlist</a></li>
@@ -59,9 +59,8 @@
                <li><a href="">Nome Playlist</a></li>
                <li><a href="">Nome Playlist</a></li>
             </ul>
-
+            <!-- User info -->
             <div class="side-nav-bar__bottom">
-
                <div id="install">
                   <i class="fas fa-arrow-circle-down"></i>
                   <span>Installa app</span>
@@ -72,12 +71,13 @@
                </div>
             </div>
          </div>
-
+         <!-- /Side navigation bar -->
+         <!-- Main body  -->
          <div class="main-content">
             <div class="top-layover">
                <a class="btn-round" href="">EFFETUA L'UPGRADE</a>
             </div>
-
+            <!-- nav bar in main section  -->
             <ul class="nav-bar">
                <li>
                   <a href="">IN EVIDENZA</a>
@@ -98,11 +98,10 @@
                   <a href="">SCOPRI</a>
                </li>
             </ul>
-
+            <!-- Songs section  -->
             <section class="section-container">
                <h2 class="section-title">Recently played</h2>
                <div class="section-body">
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/heavy-metal.jpg" alt="">
@@ -113,7 +112,6 @@
                      <h4>Heavy Metal</h4>
                      <span class="img-subtitle">Subtitle</span>
                   </div>
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/stranger-things.jpeg" alt="">
@@ -124,7 +122,6 @@
                      <h4>Stranger Things, Vol.1 (a Netflix original Series Soundtrack)</h4>
                      <span class="img-subtitle">Kyle Dyxon & Michael Stein</span>
                   </div>
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/a-quite-place.jpeg" alt="">
@@ -135,7 +132,6 @@
                      <h4>A quiet place</h4>
                      <span class="img-subtitle">Subtitle</span>
                   </div>
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/split.jpeg" alt="">
@@ -146,7 +142,6 @@
                      <h4>Split</h4>
                      <span class="img-subtitle">Subtitle</span>
                   </div>
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/wellness.jpeg" alt="">
@@ -157,7 +152,6 @@
                      <h4>A cure for wellness</h4>
                      <span class="img-subtitle">Subtitle</span>
                   </div>
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/sinister.jpeg" alt="">
@@ -170,12 +164,12 @@
                   </div>
                </div>
             </section>
-
+            <!-- /Songs section  -->
+            <!-- Mixes sectio -->
             <section class="section-container">
                <h2 class="section-title">Creato per John Doe</h2>
                <p class="section-subtitle">Più ascolti, più saranno accurati i suggerimenti. </p>
                <div class="section-body">
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/release-radar.jpeg" alt="">
@@ -183,7 +177,6 @@
                      <h4>Release Radar</h4>
                      <span class="img-subtitle">Subtitle</span>
                   </div>
-
                   <div class="card-container">
                      <div class="img-container">
                         <img src="img/daily-mix-1.jpg" alt="">
@@ -191,40 +184,38 @@
                      <h4>Daily Mix 1</h4>
                      <span class="img-subtitle">Subtitle</span>
                   </div>
-
                </div>
             </section>
+            <!-- /Mixes sectio -->
 
+            <!-- Artist section -->
             <section class="section-container">
                <h2 class="section-title">Artisti più popolari</h2>
                <p class="section-subtitle">Più ascolti, più saranno accurati i suggerimenti. </p>
                <div class="section-body">
-
                   <div class="card-container">
                      <div class="img-container img-container--circle">
                         <img src="img/heavy-metal.jpg" alt="">
                      </div>
                      <h4>Lana Del Ray</h4>
                   </div>
-
-
-
                   <div class="card-container img-container--circle">
                      <div class="img-container">
                         <img src="img/heavy-metal.jpg" alt="">
                      </div>
                      <h4>Ludovico Einaudi</h4>
                   </div>
-
                </div>
             </section>
-
-
+            <!-- /Artist section -->
          </div>
+         <!-- /Main body  -->
       </div>
+      <!-- /Main flex container -->
 
+      <!-- Playing song controller -->
       <footer>
-
+         <!-- Left part - song info -->
          <div class="display-song">
             <img src="img/sinister.jpeg" alt="">
             <div class="display-song__text">
@@ -236,6 +227,8 @@
                <i class="far fa-folder"></i>
             </div>
          </div>
+         <!-- /Left side - song info -->
+         <!-- Middle part - player controller -->
          <div class="display-player">
             <div class="display-player__icons">
                <i class="fas fa-sync-alt"></i>
@@ -254,6 +247,8 @@
                <span id="end-time">4.35</span>
             </div>
          </div>
+         <!-- /Middle part - player controller -->
+         <!-- Right part - audio controller -->
          <div class="display-volume">
             <i class="fas fa-list"></i>
             <i class="fas fa-desktop"></i>
@@ -264,8 +259,8 @@
                </div>
             </div>
          </div>
-
-
+         <!-- /Right part - audio controller -->
       </footer>
+      <!-- /Playing song controller -->
    </body>
 </html>
