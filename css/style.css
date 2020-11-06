@@ -7,7 +7,6 @@
 body {
    font-family: 'Montserrat', sans-serif;
    color: white;
-   font-size: 14px;
 }
 
 
@@ -100,12 +99,14 @@ body {
    color: white;
 }
 
-
-
-
-
 .section-container {
    padding: 0 20px;
+}
+
+.section-body {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
 }
 
 .section-title,
@@ -120,16 +121,21 @@ body {
 
 .card-container {
    margin-bottom: 15px;
-   width: 100%;
+   margin-right: 10px;
    display: flex;
    flex-direction: column;
    align-items: center;
    text-align: center;
+   width: calc(50% - 10px);
+}
+
+.section-body::after {
+   content: "";
+   flex: auto;
 }
 
 .img-container img {
    width: 100%;
-   margin-bottom: 15px;
 }
 
 .img-container--circle img {
@@ -138,9 +144,8 @@ body {
 
 .img-container {
    position: relative;
+   margin-bottom: 15px;
 }
-
-
 
 .img-layover {
    display: none;
@@ -174,21 +179,26 @@ footer {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   padding: 10px;
 }
 
+/* Display song */
 .display-song {
    display: flex;
    align-items: center;
+   height: 100%;
 }
 .display-song img {
-   height: 50px;
-   margin: 10px;
+   height: 50%;
 }
 
-.display-song__text h6 {
-   margin-bottom: 0;
+.display-song__text {
+   margin: 0 10px;
 }
-.display-song__text p {
+.display-song__text h6 {
+   margin: 0;
+}
+.display-song__text a {
    font-size: 10px;
    color: #b0b0af;
 }
@@ -196,53 +206,62 @@ footer {
 .display-song__icons {
    display: flex;
    flex-direction: column;
-   margin-left: 10px;
+   justify-content: center;
+   height: 100%;
 }
 .display-song__icons i {
-   padding: 5px;
    color: #b0b0af;
+   padding: 2px 0;
 }
 .display-song__icons i:hover {
    color: white;
 }
 
+/* Display player */
 .display-player {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
-   align-items: center;
-   width: 70%;
+   text-align: center;
+   width: 40%;
+   padding: 0 5px;
 }
 
+.display-player__icons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.display-player__icons i {
+   margin: 0 10px;
+}
 .player-container {
-   width: 100%;
-   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 #current-time,
 #end-time {
-   font-size: 10px;
+   font-size: 8px;
+}
+
+#play {
+   font-size: 30px;
+   padding: 0 10px
+}
+#play:hover {
+   font-size: 34px;
 }
 
 .display-player__slider {
    width: 60%;
-   height: 3px;
-   display: inline-block;
    margin: 0 20px;
-}
-
-.display-player__icons {
-   width: 100%;
-   text-align: center;
-}
-.display-player__icons i {
-   padding: 0 5px;
 }
 
 .display-volume {
    display: flex;
    align-items: center;
-   padding: 10px;
 }
 
 .display-volume i {
@@ -250,10 +269,9 @@ footer {
    padding: 5px;
 }
 
-
+/* Sliders */
 .display-volume__slider {
    width: 100px;
-   height: 3px;
 }
 
 .slider {
@@ -261,9 +279,8 @@ footer {
    border-radius: 5px;
    position: relative;
    cursor: pointer;
+   height: 3px;
 }
-
-
 
 .display-slider-over {
    width: 10%;
@@ -275,17 +292,25 @@ footer {
    border-radius: 5px;
 }
 
+.slider:hover .slider-circle {
+   height: 10px;
+   width: 10px;
+   border-radius: 100%;
+   transform: translate(50%, -50%);
+   position: absolute;
+   right: 0;
+   top: 50%;
+   background-color: white;
+}
 
-
-
-
-.display-slider:hover .display-slider-over {
+.slider:hover .display-slider-over {
    background-color: #81BA3D;
 }
 
 
 /* small */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px)
+ {
 
    .main-content {
       width: calc(100% - 232px);
@@ -294,6 +319,10 @@ footer {
    .side-nav-bar {
       width: 232px;
    }
+
+   .display-song__icons {
+      margin: 20px;
+   }
 }
 
 /* medium */
@@ -301,7 +330,16 @@ footer {
 
    .display-song__icons {
       flex-direction: row;
-      margin-left: 30px;
+      align-items: center;
+      margin: 20px;
+   }
+
+   .display-song__icons i {
+      padding: 0 5px;
+   }
+
+   .card-container {
+      width: calc(25% - 10px);
    }
 }
 
@@ -309,8 +347,13 @@ footer {
 @media screen and (min-width: 992px) {
 
    .card-container {
-      max-width: 300px;
+      width: calc(100% / 6 - 10px);
    }
+
+   .card-container img {
+      max-width: 200px;
+   }
+
 }
 
 /* extra-large */
